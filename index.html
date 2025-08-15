@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية الآثار القبطية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="social">
+                <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="options-group">
+                <a href="" class="cart-button">
+                    <img src="./assets/icons/cart.svg" alt="">
+                    <span class="total-count">
+                      4  
+                    </span>
+                </a>
+                <a href="" class="account-button">
+                    <span>
+                        Login
+                    </span>
+                    <img src="./assets/icons/user.svg" alt="">
+                </a>
+                <button class="switch-lang-button">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    English
+                    <img src="./assets/icons/uk.svg" alt="">
+                    <div class="options">
+                        <a href="" class="option selected">English</a>
+                        <a href="" class="option">Arabic</a>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./assets/imgs/logo.png" alt="">
+            </a>
+            <button class="toggle-menu" id="toggleMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000000"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 6h10" />
+                    <path d="M4 12h16" />
+                    <path d="M7 12h13" />
+                    <path d="M7 18h10" />
+                </svg>
+            </button>
+            <nav class="nav-menu">
+                <a href="" class="nav-link active">Home</a>
+                <a href="" class="nav-link">About us</a>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        News
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">News 1</a>
+                            <a href="" class="dropdown-item">News 2</a>
+                            <a href="" class="dropdown-item">News 3</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        Publications
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">Publications 1</a>
+                            <a href="" class="dropdown-item">Publications 2</a>
+                            <a href="" class="dropdown-item">Publications 3</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        Research
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">Research 1</a>
+                            <a href="" class="dropdown-item">Research 2</a>
+                            <a href="" class="dropdown-item">Research 3</a>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="nav-link">Events</a>
+                <a href="" class="nav-link">Contact us</a>
+            </nav>
+            <div class="actions-group">
+                <button class="search-button">
+                    <img src="./assets/icons/search.svg" alt="">
+                </button>
+                <button class="button-secondary">
+                    <img src="./assets/icons/help.svg" alt="">
+                    Support us
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+    
+        <!-- Top Header Items -->
+        <div class="mobile-top-section">
+            <div class="mobile-user-actions">
+                <a href="" class="account-button">
+                    <span>
+                        Login
+                    </span>
+                    <img src="./assets/icons/user.svg" alt="">
+                </a>
+                <a href="" class="cart-button">
+                    <img src="./assets/icons/cart.svg" alt="">
+                    <span class="total-count">
+                        4
+                    </span>
+                </a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">Home</a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">About us</a>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>News</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">News 1</a>
+                    <a href="#" class="mobile-dropdown-item">News 2</a>
+                    <a href="#" class="mobile-dropdown-item">News 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>Publications</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Publications 1</a>
+                    <a href="#" class="mobile-dropdown-item">Publications 2</a>
+                    <a href="#" class="mobile-dropdown-item">Publications 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>Research</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Research 1</a>
+                    <a href="#" class="mobile-dropdown-item">Research 2</a>
+                    <a href="#" class="mobile-dropdown-item">Research 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Events</a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Contact us</a>
+            </div>
+        </nav>
+    
+        <!-- Action Buttons -->
+        <div class="mobile-actions">
+            <a href="#" class="mobile-search">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </a>
+            <button class="support-us-button">
+                <img src="./assets/icons/help.svg" alt="">
+                Support us
+            </button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="img">
+                <img src="./assets/imgs/hero.png" alt="">
+            </div>
+            <div class="content">
+                <h1>
+                    Preserving the Legacy of 
+                    <br>
+                    <span>Coptic Heritage</span>
+                </h1>
+                <p>
+                    For over 80 years, the Society of Coptic Archaeology has been dedicated to uncovering, documenting, and sharing the rich
+                    spiritual and artistic legacy of Coptic Egypt. From sacred manuscripts and ancient churches to archaeological
+                    discoveries and academic research, our mission is to protect and promote a civilization that shaped Egypt’s Christian
+                    identity. 
+                    <br>
+                    Join us on a journey through history, where faith, art, and heritage come together to tell the story of a
+                    remarkable culture.
+                </p>
+                <button class="button-secondary">Explore Our Library</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="preserving-coptic-heritage">
+        <div class="container">
+            <h1>
+                Preserving Coptic Heritage Across Generations
+            </h1>
+            <p>
+                We are committed to documenting, studying, and promoting the rich artistic, spiritual, and archaeological legacy of
+                Coptic Egypt through education, preservation, and research.
+            </p>
+            <div class="steps-group">
+                <div class="step-wrapper">
+                    <img src="./assets/imgs/step-1.png" alt="">
+                    <h2>Documentation</h2>
+                    <p>Recording and preserving Coptic manuscripts and inscriptions.</p>
+                </div>
+                <div class="step-wrapper">
+                    <img src="./assets/imgs/step-2.png" alt="">
+                    <h2>Research</h2>
+                    <p>Promoting scholarly studies in Coptic history and art.</p>
+                </div>
+                <div class="step-wrapper">
+                    <img src="./assets/imgs/step-3.png" alt="">
+                    <h2>Conservation</h2>
+                    <p>Restoring ancient churches and sacred Coptic sites.</p>
+                </div>
+                <div class="step-wrapper">
+                    <img src="./assets/imgs/step-4.png" alt="">
+                    <h2>Community Outreach</h2>
+                    <p>Connecting global researchers with Egypt’s Coptic heritage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="discover-the-soul">
+        <div class="container">
+            <span></span>
+            <div class="play-icon">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="content">
+                <h1>Discover the Soul of Coptic Civilization</h1>
+                <p>
+                    Step inside the sacred spaces of Coptic history. 
+                    <br>
+                    From majestic churches to ancient manuscripts, we invite you to
+                    witness the living story of Egypt’s Christian heritage.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="statistics">
+        <div class="container">
+            <div class="statistics-wrapper">
+                <div class="state-card">
+                    <img src="./assets/imgs/state-1.png" alt="">
+                    <div class="text">
+                        <h1>50K+</h1>
+                        <p>Archival Records Digitized</p>
+                    </div>
+                </div>
+                <div class="state-card">
+                    <img src="./assets/imgs/state-2.png" alt="">
+                    <div class="text">
+                        <h1>2.5K+</h1>
+                        <p>Research Contributors</p>
+                    </div>
+                </div>
+                <div class="state-card">
+                    <img src="./assets/imgs/state-3.png" alt="">
+                    <div class="text">
+                        <h1>250+</h1>
+                        <p>Coptic Heritage Sites</p>
+                    </div>
+                </div>
+                <div class="state-card">
+                    <img src="./assets/imgs/state-4.png" alt="">
+                    <div class="text">
+                        <h1>80+</h1>
+                        <p>Published Studies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-latest-publications">
+        <div class="container">
+            <h1>Our Latest Publications</h1>
+            <p>
+                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic art, religious
+                traditions, architectural marvels, and historical manuscripts.
+            </p>
+            <div class="publications-wrapper">
+                <div class="publication-card">
+                  <img src="./assets/imgs/publication-1.jpg" alt="">  
+                  <div class="text">
+                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$ 
+                            <span>50,00$</span>
+                        </h3>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="publication-card">
+                  <img src="./assets/imgs/publication-2.png" alt="">  
+                  <div class="text">
+                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$ 
+                            <span>50,00$</span>
+                        </h3>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="publication-card">
+                  <img src="./assets/imgs/publication-3.png" alt="">  
+                  <div class="text">
+                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$ 
+                            <span>50,00$</span>
+                        </h3>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="publication-card">
+                  <img src="./assets/imgs/publication-4.png" alt="">  
+                  <div class="text">
+                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$ 
+                            <span>50,00$</span>
+                        </h3>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <button class="button-secondary">
+                View All Publications
+            </button>
+        </div>
+    </section>
+
+    <section class="research">
+        <div class="container">
+            <h1>
+                Research
+            </h1>
+            <p>
+                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
+                manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.
+            </p>
+            <div class="research-wrapper">
+                <div class="research-card">
+                    <img src="./assets/imgs/research-1.png" alt="">
+                    <div class="text">
+                        <p class="date">
+                            Tags - 27 Dec 2020
+                        </p>
+                        <h2 class="title">
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            divine presence.
+                        </h2>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <img src="./assets/imgs/research-2.png" alt="">
+                    <div class="text">
+                        <p class="date">
+                            Tags - 27 Dec 2020
+                        </p>
+                        <h2 class="title">
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            divine presence.
+                        </h2>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <img src="./assets/imgs/research-3.png" alt="">
+                    <div class="text">
+                        <p class="date">
+                            Tags - 27 Dec 2020
+                        </p>
+                        <h2 class="title">
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            divine presence.
+                        </h2>
+                    </div>
+                </div>
+                <div class="research-card">
+                    <img src="./assets/imgs/research-4.png" alt="">
+                    <div class="text">
+                        <p class="date">
+                            Tags - 27 Dec 2020
+                        </p>
+                        <h2 class="title">
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            divine presence.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events-and-discoveries">
+        <div class="container">
+            <h1>Events & Discoveries</h1>
+            <p>Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
+            manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.</p>
+            <div class="articles-wrapper">
+                <div href="" class="article-card">
+                    <img src="./assets/imgs/article-1.png" alt="">
+                    <div class="text">
+                        <h2 class="title">
+                            Coptic Crosses in Upper Egypt
+                        </h2>
+                        <span class="date">
+                            3/11/2025 , 03:05 PM
+                        </span>
+                        <p class="desc">
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                        </p>
+                    </div>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$
+                        </h3>
+                        <a href="" class="more">
+                            More Info 
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div href="" class="article-card">
+                    <img src="./assets/imgs/article-2.png" alt="">
+                    <div class="text">
+                        <h2 class="title">
+                            Coptic Crosses in Upper Egypt
+                        </h2>
+                        <span class="date">
+                            3/11/2025 , 03:05 PM
+                        </span>
+                        <p class="desc">
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                        </p>
+                    </div>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$
+                        </h3>
+                        <a href="" class="more">
+                            More Info 
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div href="" class="article-card">
+                    <img src="./assets/imgs/article-3.png" alt="">
+                    <div class="text">
+                        <h2 class="title">
+                            Coptic Crosses in Upper Egypt
+                        </h2>
+                        <span class="date">
+                            3/11/2025 , 03:05 PM
+                        </span>
+                        <p class="desc">
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                        </p>
+                    </div>
+                    <div class="info">
+                        <h3 class="price">
+                            40,00$
+                        </h3>
+                        <a href="" class="more">
+                            More Info 
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="button-secondary">
+                View All Events & Discoveries
+            </button>
+        </div>
+    </section>
+
+    <section class="timeless">
+        <div class="container">
+            <div class="img">
+                <img src="./assets/imgs/timeless.png" alt="">
+            </div>
+            <div class="content">
+                <h1>
+                    A Timeless Testament to Coptic 
+                    <br>
+                    <span>Faith and Artistry</span>
+                </h1>
+                <p>
+                    forged in devotion, faith, and extraordinary craftsmanship. Rooted in centuries of spiritual tradition, the image
+                    reflects more than religious identity; it tells a story of resilience through generations of prayer, persecution, and
+                    perseverance. The solemn figure at the heart of this piece invites contemplation, reminding us of the unbreakable
+                    connection between heaven and earth that Coptic art has preserved so profoundly. Each carved line, each mosaic tile,
+                    speaks of a community that used beauty not only to glorify the divine but also to assert its presence across time and
+                    place. Whether displayed in ancient monasteries or hidden in desert sanctuaries, this art survives as both history and
+                    testimony — a living echo of the Copts’ sacred journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="FAQ">
+        <div class="container">
+            <div class="img">
+                <img src="./assets/imgs/faq.png" alt="">
+            </div>
+            <div class="questions-wrapper">
+                <div class="question active">
+                    <div class="header">
+                        Why Choose Our Platform to Explore Coptic Heritage?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        How long will it take for my ad to be published?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        What documents are required to list my property?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        What should I do if a potential buyer expresses interest?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        How can I edit the listing after it's been published?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        Is it possible to feature my ad to reach more buyers?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        Can I set a reserve price for my property?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="header">
+                        What happens if my property doesn't sell during the listing period?
+                    </div>
+                    <p class="body">
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        of Coptic tradition through an immersive and reliable digital experience.
+                    </p>
+                    <div class="footer">
+                        Still Need Help?
+                        <br>
+                        If there's anything more we can do to help, please contact us. We're here to help.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="media-libarary">
+        <div class="container">
+            <h1>
+                Media library
+            </h1>
+            <p>
+                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
+                manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.
+            </p>
+            <div class="media-wrapper">
+                <div class="media-card">
+                    <img src="./assets/imgs/media-1.png" alt="">
+                    <h2 class="title">
+                        Witness the spiritual symbolism carved in stone, where light and shadow unveil
+                    </h2>
+                </div>
+                <div class="media-card">
+                    <img src="./assets/imgs/media-2.png" alt="">
+                    <h2 class="title">
+                        Witness the spiritual symbolism carved in stone, where light and shadow unveil
+                    </h2>
+                </div>
+                <div class="media-card">
+                    <img src="./assets/imgs/media-3.png" alt="">
+                    <h2 class="title">
+                        Witness the spiritual symbolism carved in stone, where light and shadow unveil
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team">
+        <div class="container">
+            <h1>
+                Our Team
+            </h1>
+            <p>
+                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic art, religious
+                traditions, architectural marvels, and historical manuscripts.
+            </p>
+            <div class="members-wrapper">
+                <div class="member-card">
+                    <img src="./assets/imgs/team-1.jpg" alt="">
+                    <div class="text">
+                        <h2 class="name">
+                            Dr. Youssef Boutros Ghali
+                        </h2>
+                        <p class="desc">
+                            economist who served in the government of Egypt as Minister of Finance
+                        </p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="./assets/imgs/team-2.jpg" alt="">
+                    <div class="text">
+                        <h2 class="name">
+                            Dr. Youssef Boutros Ghali
+                        </h2>
+                        <p class="desc">
+                            economist who served in the government of Egypt as Minister of Finance
+                        </p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="./assets/imgs/team-3.jpg" alt="">
+                    <div class="text">
+                        <h2 class="name">
+                            Dr. Youssef Boutros Ghali
+                        </h2>
+                        <p class="desc">
+                            economist who served in the government of Egypt as Minister of Finance
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
