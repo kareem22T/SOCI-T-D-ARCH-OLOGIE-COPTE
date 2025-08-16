@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,109 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scroll Animation Styles -->
+    <style>
+        /* Base animation styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+        }
+
+        /* Fade in from bottom */
+        .fade-in-up {
+            transform: translateY(50px);
+        }
+
+        .fade-in-up.animate-visible {
+            transform: translateY(0);
+        }
+
+        /* Fade in from left */
+        .fade-in-left {
+            transform: translateX(-50px);
+        }
+
+        .fade-in-left.animate-visible {
+            transform: translateX(0);
+        }
+
+        /* Fade in from right */
+        .fade-in-right {
+            transform: translateX(50px);
+        }
+
+        .fade-in-right.animate-visible {
+            transform: translateX(0);
+        }
+
+        /* Scale animation */
+        .scale-in {
+            transform: scale(0.8);
+        }
+
+        .scale-in.animate-visible {
+            transform: scale(1);
+        }
+
+        /* Staggered animations for groups */
+        .stagger-item {
+            transition-delay: 0s;
+        }
+
+        .stagger-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-item:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-item:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-item:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        .stagger-item:nth-child(7) {
+            transition-delay: 0.7s;
+        }
+
+        .stagger-item:nth-child(8) {
+            transition-delay: 0.8s;
+        }
+
+        /* Counter animation */
+        .counter {
+            transition: all 0.8s ease-out;
+        }
+
+
+        .image-reveal img {
+            transform: scale(1.1);
+            transition: transform 0.8s ease-out;
+        }
+
+        .image-reveal.animate-visible img {
+            transform: scale(1);
+        }
+    </style>
 </head>
+
 <body>
     <div class="top-header">
         <div class="container">
@@ -30,7 +133,7 @@
                 <a href="" class="cart-button">
                     <img src="./assets/icons/cart.svg" alt="">
                     <span class="total-count">
-                      4  
+                        4
                     </span>
                 </a>
                 <a href="" class="account-button">
@@ -57,8 +160,8 @@
                 <img src="./assets/imgs/logo.png" alt="">
             </a>
             <button class="toggle-menu" id="toggleMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000000"
-                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M7 6h10" />
                     <path d="M4 12h16" />
                     <path d="M7 12h13" />
@@ -112,13 +215,13 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-    
+
         <!-- Top Header Items -->
         <div class="mobile-top-section">
             <div class="mobile-user-actions">
@@ -147,7 +250,7 @@
                 </a>
             </div>
         </div>
-    
+
         <!-- Navigation Menu -->
         <nav class="mobile-nav">
             <div class="mobile-nav-item">
@@ -196,7 +299,7 @@
                 <a href="#" class="mobile-nav-link">Contact us</a>
             </div>
         </nav>
-    
+
         <!-- Action Buttons -->
         <div class="mobile-actions">
             <a href="#" class="mobile-search">
@@ -212,22 +315,26 @@
 
     <section class="hero">
         <div class="container">
-            <div class="img">
+            <div class="img animate-on-scroll fade-in-left image-reveal">
                 <img src="./assets/imgs/hero.png" alt="">
             </div>
-            <div class="content">
+            <div class="content animate-on-scroll fade-in-right">
                 <h1>
-                    Preserving the Legacy of 
+                    Preserving the Legacy of
                     <br>
                     <span>Coptic Heritage</span>
                 </h1>
                 <p>
-                    For over 80 years, the Society of Coptic Archaeology has been dedicated to uncovering, documenting, and sharing the rich
-                    spiritual and artistic legacy of Coptic Egypt. From sacred manuscripts and ancient churches to archaeological
-                    discoveries and academic research, our mission is to protect and promote a civilization that shaped Egypt’s Christian
-                    identity. 
+                    For over 80 years, the Society of Coptic Archaeology has been dedicated to uncovering, documenting,
+                    and sharing the rich
+                    spiritual and artistic legacy of Coptic Egypt. From sacred manuscripts and ancient churches to
+                    archaeological
+                    discoveries and academic research, our mission is to protect and promote a civilization that shaped
+                    Egypt's Christian
+                    identity.
                     <br>
-                    Join us on a journey through history, where faith, art, and heritage come together to tell the story of a
+                    Join us on a journey through history, where faith, art, and heritage come together to tell the story
+                    of a
                     remarkable culture.
                 </p>
                 <button class="button-secondary">Explore Our Library</button>
@@ -237,33 +344,34 @@
 
     <section class="preserving-coptic-heritage">
         <div class="container">
-            <h1>
+            <h1 class="animate-on-scroll fade-in-up">
                 Preserving Coptic Heritage Across Generations
             </h1>
-            <p>
-                We are committed to documenting, studying, and promoting the rich artistic, spiritual, and archaeological legacy of
+            <p class="animate-on-scroll fade-in-up">
+                We are committed to documenting, studying, and promoting the rich artistic, spiritual, and
+                archaeological legacy of
                 Coptic Egypt through education, preservation, and research.
             </p>
             <div class="steps-group">
-                <div class="step-wrapper">
+                <div class="step-wrapper animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/step-1.png" alt="">
                     <h2>Documentation</h2>
                     <p>Recording and preserving Coptic manuscripts and inscriptions.</p>
                 </div>
-                <div class="step-wrapper">
+                <div class="step-wrapper animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/step-2.png" alt="">
                     <h2>Research</h2>
                     <p>Promoting scholarly studies in Coptic history and art.</p>
                 </div>
-                <div class="step-wrapper">
+                <div class="step-wrapper animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/step-3.png" alt="">
                     <h2>Conservation</h2>
                     <p>Restoring ancient churches and sacred Coptic sites.</p>
                 </div>
-                <div class="step-wrapper">
+                <div class="step-wrapper animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/step-4.png" alt="">
                     <h2>Community Outreach</h2>
-                    <p>Connecting global researchers with Egypt’s Coptic heritage.</p>
+                    <p>Connecting global researchers with Egypt's Coptic heritage.</p>
                 </div>
             </div>
         </div>
@@ -272,48 +380,49 @@
     <section class="discover-the-soul">
         <div class="container">
             <span></span>
-            <div class="play-icon">
+            <div class="play-icon animate-on-scroll scale-in">
                 <i class="fa-solid fa-play"></i>
             </div>
-            <div class="content">
+            <div class="content animate-on-scroll fade-in-up">
                 <h1>Discover the Soul of Coptic Civilization</h1>
                 <p>
-                    Step inside the sacred spaces of Coptic history. 
+                    Step inside the sacred spaces of Coptic history.
                     <br>
                     From majestic churches to ancient manuscripts, we invite you to
-                    witness the living story of Egypt’s Christian heritage.
+                    witness the living story of Egypt's Christian heritage.
                 </p>
             </div>
         </div>
     </section>
+
     <section class="statistics">
         <div class="container">
             <div class="statistics-wrapper">
-                <div class="state-card">
+                <div class="state-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/state-1.png" alt="">
                     <div class="text">
-                        <h1>50K+</h1>
+                        <h1 class="counter" data-target="50">0</h1>
                         <p>Archival Records Digitized</p>
                     </div>
                 </div>
-                <div class="state-card">
+                <div class="state-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/state-2.png" alt="">
                     <div class="text">
-                        <h1>2.5K+</h1>
+                        <h1 class="counter" data-target="2.5">0</h1>
                         <p>Research Contributors</p>
                     </div>
                 </div>
-                <div class="state-card">
+                <div class="state-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/state-3.png" alt="">
                     <div class="text">
-                        <h1>250+</h1>
+                        <h1 class="counter" data-target="250">0</h1>
                         <p>Coptic Heritage Sites</p>
                     </div>
                 </div>
-                <div class="state-card">
+                <div class="state-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/state-4.png" alt="">
                     <div class="text">
-                        <h1>80+</h1>
+                        <h1 class="counter" data-target="80">0</h1>
                         <p>Published Studies</p>
                     </div>
                 </div>
@@ -323,82 +432,83 @@
 
     <section class="our-latest-publications">
         <div class="container">
-            <h1>Our Latest Publications</h1>
-            <p>
-                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic art, religious
+            <h1 class="animate-on-scroll fade-in-up">Our Latest Publications</h1>
+            <p class="animate-on-scroll fade-in-up">
+                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic
+                art, religious
                 traditions, architectural marvels, and historical manuscripts.
             </p>
             <div class="publications-wrapper">
-                <div class="publication-card">
-                  <img src="./assets/imgs/publication-1.jpg" alt="">  
-                  <div class="text">
-                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
-                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
-                    <div class="info">
-                        <h3 class="price">
-                            40,00$ 
-                            <span>50,00$</span>
-                        </h3>
-                        <button class="add-to-cart-btn">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            Add to cart
-                        </button>
+                <div class="publication-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/publication-1.jpg" alt="">
+                    <div class="text">
+                        <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                        <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                        <div class="info">
+                            <h3 class="price">
+                                40,00$
+                                <span>50,00$</span>
+                            </h3>
+                            <button class="add-to-cart-btn">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to cart
+                            </button>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="publication-card">
-                  <img src="./assets/imgs/publication-2.png" alt="">  
-                  <div class="text">
-                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
-                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
-                    <div class="info">
-                        <h3 class="price">
-                            40,00$ 
-                            <span>50,00$</span>
-                        </h3>
-                        <button class="add-to-cart-btn">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            Add to cart
-                        </button>
+                <div class="publication-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/publication-2.png" alt="">
+                    <div class="text">
+                        <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                        <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                        <div class="info">
+                            <h3 class="price">
+                                40,00$
+                                <span>50,00$</span>
+                            </h3>
+                            <button class="add-to-cart-btn">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to cart
+                            </button>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="publication-card">
-                  <img src="./assets/imgs/publication-3.png" alt="">  
-                  <div class="text">
-                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
-                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
-                    <div class="info">
-                        <h3 class="price">
-                            40,00$ 
-                            <span>50,00$</span>
-                        </h3>
-                        <button class="add-to-cart-btn">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            Add to cart
-                        </button>
+                <div class="publication-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/publication-3.png" alt="">
+                    <div class="text">
+                        <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                        <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                        <div class="info">
+                            <h3 class="price">
+                                40,00$
+                                <span>50,00$</span>
+                            </h3>
+                            <button class="add-to-cart-btn">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to cart
+                            </button>
+                        </div>
                     </div>
-                  </div>
                 </div>
-                <div class="publication-card">
-                  <img src="./assets/imgs/publication-4.png" alt="">  
-                  <div class="text">
-                    <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
-                    <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
-                    <div class="info">
-                        <h3 class="price">
-                            40,00$ 
-                            <span>50,00$</span>
-                        </h3>
-                        <button class="add-to-cart-btn">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            Add to cart
-                        </button>
+                <div class="publication-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/publication-4.png" alt="">
+                    <div class="text">
+                        <h2>Icons of the Desert Coptic Art in Upper Egypt</h2>
+                        <p>An illustrated guide exploring rare iconography in Coptic monasteries of Upper Egypt.</p>
+                        <div class="info">
+                            <h3 class="price">
+                                40,00$
+                                <span>50,00$</span>
+                            </h3>
+                            <button class="add-to-cart-btn">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add to cart
+                            </button>
+                        </div>
                     </div>
-                  </div>
                 </div>
             </div>
-            <button class="button-secondary">
+            <button class="button-secondary animate-on-scroll fade-in-up">
                 View All Publications
             </button>
         </div>
@@ -406,58 +516,63 @@
 
     <section class="research">
         <div class="container">
-            <h1>
+            <h1 class="animate-on-scroll fade-in-up">
                 Research
             </h1>
-            <p>
-                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
-                manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.
+            <p class="animate-on-scroll fade-in-up">
+                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons
+                to ancient
+                manuscripts, each event unveils a unique chapter of Egypt's Coptic heritage.
             </p>
             <div class="research-wrapper">
-                <div class="research-card">
+                <div class="research-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/research-1.png" alt="">
                     <div class="text">
                         <p class="date">
                             Tags - 27 Dec 2020
                         </p>
                         <h2 class="title">
-                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient
+                            roots of Coptic identity and
                             divine presence.
                         </h2>
                     </div>
                 </div>
-                <div class="research-card">
+                <div class="research-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/research-2.png" alt="">
                     <div class="text">
                         <p class="date">
                             Tags - 27 Dec 2020
                         </p>
                         <h2 class="title">
-                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient
+                            roots of Coptic identity and
                             divine presence.
                         </h2>
                     </div>
                 </div>
-                <div class="research-card">
+                <div class="research-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/research-3.png" alt="">
                     <div class="text">
                         <p class="date">
                             Tags - 27 Dec 2020
                         </p>
                         <h2 class="title">
-                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient
+                            roots of Coptic identity and
                             divine presence.
                         </h2>
                     </div>
                 </div>
-                <div class="research-card">
+                <div class="research-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/research-4.png" alt="">
                     <div class="text">
                         <p class="date">
                             Tags - 27 Dec 2020
                         </p>
                         <h2 class="title">
-                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient roots of Coptic identity and
+                            Witness the spiritual symbolism carved in stone, where light and shadow unveil the ancient
+                            roots of Coptic identity and
                             divine presence.
                         </h2>
                     </div>
@@ -468,11 +583,12 @@
 
     <section class="events-and-discoveries">
         <div class="container">
-            <h1>Events & Discoveries</h1>
-            <p>Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
-            manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.</p>
+            <h1 class="animate-on-scroll fade-in-up">Events & Discoveries</h1>
+            <p class="animate-on-scroll fade-in-up">Explore a diverse collection of Coptic cultural highlights and
+                historical treasures. From sacred icons to ancient
+                manuscripts, each event unveils a unique chapter of Egypt's Coptic heritage.</p>
             <div class="articles-wrapper">
-                <div href="" class="article-card">
+                <div href="" class="article-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/article-1.png" alt="">
                     <div class="text">
                         <h2 class="title">
@@ -482,7 +598,8 @@
                             3/11/2025 , 03:05 PM
                         </span>
                         <p class="desc">
-                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic
+                            crosses from desert monasteries.
                         </p>
                     </div>
                     <div class="info">
@@ -490,12 +607,12 @@
                             40,00$
                         </h3>
                         <a href="" class="more">
-                            More Info 
+                            More Info
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div href="" class="article-card">
+                <div href="" class="article-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/article-2.png" alt="">
                     <div class="text">
                         <h2 class="title">
@@ -505,7 +622,8 @@
                             3/11/2025 , 03:05 PM
                         </span>
                         <p class="desc">
-                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic
+                            crosses from desert monasteries.
                         </p>
                     </div>
                     <div class="info">
@@ -513,12 +631,12 @@
                             40,00$
                         </h3>
                         <a href="" class="more">
-                            More Info 
+                            More Info
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div href="" class="article-card">
+                <div href="" class="article-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/article-3.png" alt="">
                     <div class="text">
                         <h2 class="title">
@@ -528,7 +646,8 @@
                             3/11/2025 , 03:05 PM
                         </span>
                         <p class="desc">
-                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic crosses from desert monasteries.
+                            A visual journey into the spiritual and artistic meaning of hand-carved wooden Coptic
+                            crosses from desert monasteries.
                         </p>
                     </div>
                     <div class="info">
@@ -536,13 +655,13 @@
                             40,00$
                         </h3>
                         <a href="" class="more">
-                            More Info 
+                            More Info
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <button class="button-secondary">
+            <button class="button-secondary animate-on-scroll fade-in-up">
                 View All Events & Discoveries
             </button>
         </div>
@@ -550,23 +669,29 @@
 
     <section class="timeless">
         <div class="container">
-            <div class="img">
+            <div class="img animate-on-scroll fade-in-left image-reveal">
                 <img src="./assets/imgs/timeless.png" alt="">
             </div>
-            <div class="content">
+            <div class="content animate-on-scroll fade-in-right">
                 <h1>
-                    A Timeless Testament to Coptic 
+                    A Timeless Testament to Coptic
                     <br>
                     <span>Faith and Artistry</span>
                 </h1>
                 <p>
-                    forged in devotion, faith, and extraordinary craftsmanship. Rooted in centuries of spiritual tradition, the image
-                    reflects more than religious identity; it tells a story of resilience through generations of prayer, persecution, and
-                    perseverance. The solemn figure at the heart of this piece invites contemplation, reminding us of the unbreakable
-                    connection between heaven and earth that Coptic art has preserved so profoundly. Each carved line, each mosaic tile,
-                    speaks of a community that used beauty not only to glorify the divine but also to assert its presence across time and
-                    place. Whether displayed in ancient monasteries or hidden in desert sanctuaries, this art survives as both history and
-                    testimony — a living echo of the Copts’ sacred journey.
+                    forged in devotion, faith, and extraordinary craftsmanship. Rooted in centuries of spiritual
+                    tradition, the image
+                    reflects more than religious identity; it tells a story of resilience through generations of prayer,
+                    persecution, and
+                    perseverance. The solemn figure at the heart of this piece invites contemplation, reminding us of
+                    the unbreakable
+                    connection between heaven and earth that Coptic art has preserved so profoundly. Each carved line,
+                    each mosaic tile,
+                    speaks of a community that used beauty not only to glorify the divine but also to assert its
+                    presence across time and
+                    place. Whether displayed in ancient monasteries or hidden in desert sanctuaries, this art survives
+                    as both history and
+                    testimony — a living echo of the Copts' sacred journey.
                 </p>
             </div>
         </div>
@@ -574,24 +699,27 @@
 
     <section class="FAQ">
         <div class="container">
-            <div class="img">
+            <div class="img animate-on-scroll fade-in-left image-reveal">
                 <img src="./assets/imgs/faq.png" alt="">
             </div>
-            <div class="questions-wrapper">
+            <div class="questions-wrapper animate-on-scroll fade-in-right">
                 <div class="question active">
                     <div class="header">
                         Why Choose Our Platform to Explore Coptic Heritage?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -599,15 +727,18 @@
                         How long will it take for my ad to be published?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -615,15 +746,18 @@
                         What documents are required to list my property?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -631,15 +765,18 @@
                         What should I do if a potential buyer expresses interest?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -647,15 +784,18 @@
                         How can I edit the listing after it's been published?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -663,15 +803,18 @@
                         Is it possible to feature my ad to reach more buyers?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -679,15 +822,18 @@
                         Can I set a reserve price for my property?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
                 <div class="question">
@@ -695,15 +841,18 @@
                         What happens if my property doesn't sell during the listing period?
                     </div>
                     <p class="body">
-                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture. Whether you're a researcher,
-                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content, verified sources, and
-                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we connect you with the heart
+                        Our platform offers a unique gateway to discovering the timeless beauty of Coptic culture.
+                        Whether you're a researcher,
+                        tourist, or simply curious about the Christian history of Egypt, we provide authentic content,
+                        verified sources, and
+                        high-quality visuals. From ancient monasteries to hidden icons and historical manuscripts, we
+                        connect you with the heart
                         of Coptic tradition through an immersive and reliable digital experience.
                     </p>
                     <div class="footer">
                         Still Need Help?
                         <br>
-                        If there's anything more we can do to help, please contact us. We're here to help.
+                        If there's anything more we can do to help, please contact us. We're here to help.
                     </div>
                 </div>
             </div>
@@ -712,27 +861,28 @@
 
     <section class="media-libarary">
         <div class="container">
-            <h1>
+            <h1 class="animate-on-scroll fade-in-up">
                 Media library
             </h1>
-            <p>
-                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons to ancient
-                manuscripts, each event unveils a unique chapter of Egypt’s Coptic heritage.
+            <p class="animate-on-scroll fade-in-up">
+                Explore a diverse collection of Coptic cultural highlights and historical treasures. From sacred icons
+                to ancient
+                manuscripts, each event unveils a unique chapter of Egypt's Coptic heritage.
             </p>
             <div class="media-wrapper">
-                <div class="media-card">
+                <div class="media-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/media-1.png" alt="">
                     <h2 class="title">
                         Witness the spiritual symbolism carved in stone, where light and shadow unveil
                     </h2>
                 </div>
-                <div class="media-card">
+                <div class="media-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/media-2.png" alt="">
                     <h2 class="title">
                         Witness the spiritual symbolism carved in stone, where light and shadow unveil
                     </h2>
                 </div>
-                <div class="media-card">
+                <div class="media-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/media-3.png" alt="">
                     <h2 class="title">
                         Witness the spiritual symbolism carved in stone, where light and shadow unveil
@@ -744,15 +894,16 @@
 
     <section class="our-team">
         <div class="container">
-            <h1>
+            <h1 class="animate-on-scroll fade-in-up">
                 Our Team
             </h1>
-            <p>
-                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic art, religious
+            <p class="animate-on-scroll fade-in-up">
+                Dive into a curated selection of scholarly publications that shed light on the rich legacy of Coptic
+                art, religious
                 traditions, architectural marvels, and historical manuscripts.
             </p>
             <div class="members-wrapper">
-                <div class="member-card">
+                <div class="member-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/team-1.jpg" alt="">
                     <div class="text">
                         <h2 class="name">
@@ -763,7 +914,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="member-card">
+                <div class="member-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/team-2.jpg" alt="">
                     <div class="text">
                         <h2 class="name">
@@ -774,7 +925,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="member-card">
+                <div class="member-card animate-on-scroll fade-in-up stagger-item">
                     <img src="./assets/imgs/team-3.jpg" alt="">
                     <div class="text">
                         <h2 class="name">
@@ -789,6 +940,193 @@
         </div>
     </section>
 
+    <section class="our-parteners">
+        <div class="container">
+            <h1 class="animate-on-scroll fade-in-up">Our success Parteners</h1>
+            <div class="stars animate-on-scroll fade-in-up">
+                <i class="fa-solid fa-star active"></i>
+                <i class="fa-solid fa-star active"></i>
+                <i class="fa-solid fa-star active"></i>
+                <i class="fa-solid fa-star active"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="animate-on-scroll fade-in-up">
+                <i class="fa-solid fa-quote-left"></i>
+                Working with the Coptic Heritage Foundation has been a remarkable experience. Their dedication to
+                preserving our
+                ancient traditions and culture is truly inspiring. We're proud to support their mission in documenting
+                and sharing
+                Coptic heritage with future generations ocumenting and sharing Coptic heritage with future
+                <i class="fa-solid fa-quote-right"></i>
+            </p>
+            <p class="sub-title animate-on-scroll fade-in-up">
+                Coptic Heritage Foundation, <span>Preservation Partner</span>
+            </p>
+            <div class="parterners-wrapper">
+                <div class="partner-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/partener-1.png" alt="">
+                </div>
+                <div class="partner-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/partener-2.png" alt="">
+                </div>
+                <div class="partner-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/partener-3.png" alt="">
+                </div>
+                <div class="partner-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/partener-4.png" alt="">
+                </div>
+                <div class="partner-card animate-on-scroll fade-in-up stagger-item">
+                    <img src="./assets/imgs/partener-5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main animate-on-scroll fade-in-up">
+                <div class="footer-brand">
+                    <div class="brand-header">
+                        <div class="logo">
+                            <img src="./assets/imgs/footer-logo.png" alt="">
+                        </div>
+                    </div>
+
+                    <p class="mission-text">
+                        At Société d'Archéologie Copte, we are committed to preserving and
+                        promoting the legacy of Coptic heritage through research,
+                        documentation, education, and cultural engagement.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20124756805</span>
+                        <span><i class="fas fa-envelope"></i> info@sacopte.org</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Research Initiatives</a></li>
+                            <li><a href="#">Events & Exhibitions</a></li>
+                            <li><a href="#">Our Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Documentation Standards</a></li>
+                            <li><a href="#">Contributor Guidelines</a></li>
+                            <li><a href="#">Partnership Opportunities</a></li>
+                            <li><a href="#">Volunteer With Us</a></li>
+                            <li><a href="#">Donate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom animate-on-scroll">
+                <div class="footer-legal">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="copyright">
+                    © 2026 SOCIÉTÉ D'ARCHÉOLOGIE COPTE
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="./assets/js/main.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+
+                    // Handle counter animations
+                    if (entry.target.classList.contains('counter')) {
+                        animateCounter(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Counter animation function
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    // Format numbers appropriately
+                    if (target >= 1000) {
+                        element.textContent = (current / 1000).toFixed(1) + 'K+';
+                    } else if (target < 10) {
+                        element.textContent = current.toFixed(1) + 'K+';
+                    } else {
+                        element.textContent = Math.floor(current) + '+';
+                    }
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    // Final value
+                    if (target >= 1000) {
+                        element.textContent = (target / 1000).toFixed(0) + 'K+';
+                    } else if (target < 10) {
+                        element.textContent = target + 'K+';
+                    } else {
+                        element.textContent = target + '+';
+                    }
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Add smooth scrolling for better animation experience
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
 </body>
+
 </html>
