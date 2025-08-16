@@ -66,3 +66,49 @@ document.querySelectorAll(".question .header").forEach(header => {
         question.classList.toggle("active");
     });
 });
+
+// Get elements
+const playButton = document.getElementById('playButton');
+const videoPopup = document.getElementById('videoPopup');
+const closeBtn = document.getElementById('closeBtn');
+const video = document.querySelector('video');
+
+// Open popup when play button is clicked
+playButton.addEventListener('click', function() {
+    videoPopup.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // If using video tag, play the video
+    if (video) {
+        video.currentTime = 0; // Reset video to beginning
+        video.play();
+    }
+});
+
+// Close popup when close button is clicked
+closeBtn.addEventListener('click', closePopup);
+
+// Close popup when clicking outside the content
+videoPopup.addEventListener('click', function(e) {
+    if (e.target === videoPopup) {
+        closePopup();
+    }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && videoPopup.classList.contains('active')) {
+        closePopup();
+    }
+});
+
+// Close popup function
+function closePopup() {
+    videoPopup.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+    
+    // If using video tag, pause the video
+    if (video) {
+        video.pause();
+    }
+}
