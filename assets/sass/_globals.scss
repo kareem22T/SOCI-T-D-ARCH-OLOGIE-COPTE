@@ -18,6 +18,9 @@ body {
     padding-right: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
 /* sm: ≥640px */
 @media (min-width: $sm) {
     .container {
