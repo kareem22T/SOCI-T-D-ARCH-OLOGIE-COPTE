@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جمعية الآثار القبطية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- Scroll Animation Styles -->
+    <style>
+        /* Base animation styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+        }
+
+        /* Fade in from bottom */
+        .fade-in-up {
+            transform: translateY(50px);
+        }
+
+        .fade-in-up.animate-visible {
+            transform: translateY(0);
+        }
+
+        /* Fade in from left */
+        .fade-in-left {
+            transform: translateX(-50px);
+        }
+
+        .fade-in-left.animate-visible {
+            transform: translateX(0);
+        }
+
+        /* Fade in from right */
+        .fade-in-right {
+            transform: translateX(50px);
+        }
+
+        .fade-in-right.animate-visible {
+            transform: translateX(0);
+        }
+
+        /* Scale animation */
+        .scale-in {
+            transform: scale(0.8);
+        }
+
+        .scale-in.animate-visible {
+            transform: scale(1);
+        }
+
+        /* Staggered animations for groups */
+        .stagger-item {
+            transition-delay: 0s;
+        }
+
+        .stagger-item:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-item:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-item:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-item:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .stagger-item:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        .stagger-item:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        .stagger-item:nth-child(7) {
+            transition-delay: 0.7s;
+        }
+
+        .stagger-item:nth-child(8) {
+            transition-delay: 0.8s;
+        }
+
+        /* Counter animation */
+        .counter {
+            transition: all 0.8s ease-out;
+        }
+
+
+        .image-reveal img {
+            transform: scale(1.1);
+            transition: transform 0.8s ease-out;
+        }
+
+        .image-reveal.animate-visible img {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="social">
+                <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="options-group">
+                <a href="" class="cart-button">
+                    <img src="./assets/icons/cart.svg" alt="">
+                    <span class="total-count">
+                        4
+                    </span>
+                </a>
+                <a href="" class="account-button">
+                    <span>
+                        Login
+                    </span>
+                    <img src="./assets/icons/user.svg" alt="">
+                </a>
+                <button class="switch-lang-button">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    English
+                    <img src="./assets/icons/uk.svg" alt="">
+                    <div class="options">
+                        <a href="" class="option selected">English</a>
+                        <a href="" class="option">Arabic</a>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./assets/imgs/logo.png" alt="">
+            </a>
+            <button class="toggle-menu" id="toggleMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 6h10" />
+                    <path d="M4 12h16" />
+                    <path d="M7 12h13" />
+                    <path d="M7 18h10" />
+                </svg>
+            </button>
+            <nav class="nav-menu">
+                <a href="" class="nav-link">Home</a>
+                <a href="" class="nav-link active">About us</a>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        News
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">News 1</a>
+                            <a href="" class="dropdown-item">News 2</a>
+                            <a href="" class="dropdown-item">News 3</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        Publications
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">Publications 1</a>
+                            <a href="" class="dropdown-item">Publications 2</a>
+                            <a href="" class="dropdown-item">Publications 3</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="dropdown-link">
+                    <a href="" class="nav-link">
+                        Research
+                        <div class="dropdown-list">
+                            <a href="" class="dropdown-item">Research 1</a>
+                            <a href="" class="dropdown-item">Research 2</a>
+                            <a href="" class="dropdown-item">Research 3</a>
+                        </div>
+                    </a>
+                </div>
+                <a href="" class="nav-link">Events</a>
+                <a href="" class="nav-link">Contact us</a>
+            </nav>
+            <div class="actions-group">
+                <button class="search-button">
+                    <img src="./assets/icons/search.svg" alt="">
+                </button>
+                <button class="button-secondary">
+                    <img src="./assets/icons/help.svg" alt="">
+                    Support us
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <!-- Top Header Items -->
+        <div class="mobile-top-section">
+            <div class="mobile-user-actions">
+                <a href="" class="account-button">
+                    <span>
+                        Login
+                    </span>
+                    <img src="./assets/icons/user.svg" alt="">
+                </a>
+                <a href="" class="cart-button">
+                    <img src="./assets/icons/cart.svg" alt="">
+                    <span class="total-count">
+                        4
+                    </span>
+                </a>
+            </div>
+            <div class="social">
+                <a href="">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Home</a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link active">About us</a>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>News</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">News 1</a>
+                    <a href="#" class="mobile-dropdown-item">News 2</a>
+                    <a href="#" class="mobile-dropdown-item">News 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>Publications</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Publications 1</a>
+                    <a href="#" class="mobile-dropdown-item">Publications 2</a>
+                    <a href="#" class="mobile-dropdown-item">Publications 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item mobile-dropdown">
+                <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                    <span>Research</span>
+                    <i class="fas fa-chevron-down mobile-dropdown-icon"></i>
+                </a>
+                <div class="mobile-dropdown-content">
+                    <a href="#" class="mobile-dropdown-item">Research 1</a>
+                    <a href="#" class="mobile-dropdown-item">Research 2</a>
+                    <a href="#" class="mobile-dropdown-item">Research 3</a>
+                </div>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Events</a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#" class="mobile-nav-link">Contact us</a>
+            </div>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="mobile-actions">
+            <a href="#" class="mobile-search">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </a>
+            <button class="support-us-button">
+                <img src="./assets/icons/help.svg" alt="">
+                Support us
+            </button>
+        </div>
+    </div>
+
+
+    <div class="edit-profile-wrapper">
+        <div class="container">
+            <div class="edit-profile-form-wrapper">
+                <section class="edit-profile-form">
+                    <!-- Added fade-in-right animation to the form -->
+                    <form action="" class="animate-on-scroll fade-in-up">
+                        <div class="form-row">
+                            <div class="photo">
+                                <label for="photo">
+                                    <img src="./assets/imgs/avatar.png" alt="">
+                                    <input type="file" name="photo" id="photo">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">First Name</label>
+                                <input type="text" placeholder="Please Enter First Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Last Name</label>
+                                <input type="text" placeholder="Please Enter Last Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="text" placeholder="Please Enter Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Phone Number</label>
+                                <input type="text" placeholder="Please Enter Phone Number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button class="button-secondary">
+                                Edit Profile
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main animate-on-scroll fade-in-up">
+                <div class="footer-brand">
+                    <div class="brand-header">
+                        <div class="logo">
+                            <img src="./assets/imgs/footer-logo.png" alt="">
+                        </div>
+                    </div>
+
+                    <p class="mission-text">
+                        At Société d'Archéologie Copte, we are committed to preserving and
+                        promoting the legacy of Coptic heritage through research,
+                        documentation, education, and cultural engagement.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> +20124756805</span>
+                        <span><i class="fas fa-envelope"></i> info@sacopte.org</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Research Initiatives</a></li>
+                            <li><a href="#">Events & Exhibitions</a></li>
+                            <li><a href="#">Our Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Documentation Standards</a></li>
+                            <li><a href="#">Contributor Guidelines</a></li>
+                            <li><a href="#">Partnership Opportunities</a></li>
+                            <li><a href="#">Volunteer With Us</a></li>
+                            <li><a href="#">Donate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom animate-on-scroll">
+                <div class="footer-legal">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="copyright">
+                    © 2026 SOCIÉTÉ D'ARCHÉOLOGIE COPTE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+
+                    // Handle counter animations
+                    if (entry.target.classList.contains('counter')) {
+                        animateCounter(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Counter animation function
+        function animateCounter(element) {
+            const target = parseFloat(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    // Format numbers appropriately
+                    if (target >= 1000) {
+                        element.textContent = (current / 1000).toFixed(1) + 'K+';
+                    } else if (target < 10) {
+                        element.textContent = current.toFixed(1) + 'K+';
+                    } else {
+                        element.textContent = Math.floor(current) + '+';
+                    }
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    // Final value
+                    if (target >= 1000) {
+                        element.textContent = (target / 1000).toFixed(0) + 'K+';
+                    } else if (target < 10) {
+                        element.textContent = target + 'K+';
+                    } else {
+                        element.textContent = target + '+';
+                    }
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Add smooth scrolling for better animation experience
+        document.documentElement.style.scrollBehavior = 'smooth';
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById("photo");
+            const img = input.previousElementSibling; // الصورة اللي قبل input
+
+            input.addEventListener("change", (event) => {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        img.src = e.target.result; // تغيير الصورة للمعاينة
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

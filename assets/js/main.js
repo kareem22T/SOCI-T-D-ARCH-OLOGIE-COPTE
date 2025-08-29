@@ -112,3 +112,4 @@ function closePopup() {
         video.pause();
     }
 }
+
