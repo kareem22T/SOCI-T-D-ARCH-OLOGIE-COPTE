@@ -313,14 +313,15 @@
         </div>
     </div>
 
+    
     <section class="section-header">
-        <img src="./assets/imgs/payment.png" alt="">
+        <img src="./assets/imgs/support.png" alt="">
         <div class="container">
-            <h1 class="animate-on-scroll fade-in-left">Payment Process</h1>
+            <h1 class="animate-on-scroll fade-in-left">support us</h1>
             <p class="path animate-on-scroll fade-in-left">
-                <span>Coptic Crosses in Upper Egypt</span>
+                <span>Home</span>
                 /
-                <span>Payment Process</span>
+                <span>support us</span>
             </p>
         </div>
     </section>
@@ -328,48 +329,132 @@
 
     <div class="edit-profile-wrapper">
         <div class="container">
-            <div class="edit-profile-form-wrapper">
+            <div class="edit-profile-form-wrapper edit-profile-form-wrapper-column">
                 <section class="edit-profile-form">
                     <!-- Added fade-in-right animation to the form -->
-                     <div class="header">
-                        <h2>Payment  Information</h2>
-                        <div class="info">
-                            <p class="sub-title">You are now proceeding to settle the payment for this amount</p>
-                            <p class="price">
-                                83,00$ 
-                            </p>
-                        </div>
-                     </div>
-                    <form action="" class="animate-on-scroll fade-in-up">
+                    <div action="" class="animate-on-scroll fade-in-up form-part">
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="">Card Holder Name *</label>
-                                <input type="text" placeholder="Please Enter Card Holder Name">
+                            <div class="header donate-header">
+                                <h2>Make Your donation</h2>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="">Card Holder Number *</label>
-                                <input type="text" placeholder="Please Enter Card Holder Number">
+                                <label for="">Select Currency *</label>
+                                <select name="" id="">
+                                    <option value="">Select Currency ---</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group radion-curr">
+                                <input type="radio" value="10" id="ammout_1" checked name="ammout">
+                                <label for="ammout_1">
+                                    10 USD
+                                </label>
+                            </div>
+                            <div class="form-group radion-curr">
+                                <input type="radio" value="25" id="ammout_2" name="ammout">
+                                <label for="ammout_2">
+                                    25 USD
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group radion-curr">
+                                <input type="radio" value="50" id="ammout_3" name="ammout">
+                                <label for="ammout_3">
+                                    50 USD
+                                </label>
+                            </div>
+                            <div class="form-group radion-curr">
+                                <input type="radio" value="100" id="ammout_4" name="ammout">
+                                <label for="ammout_4">
+                                    100 USD
+                                </label>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="">Expiration Date *</label>
-                                <input type="date" placeholder="Please Enter Card Holder Number">
+                                <label for="">Or Enter custom Amount *</label>
+                                <input type="text" placeholder="Please Enter custom Amount">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="edit-profile-form">
+                    <!-- Added fade-in-right animation to the form -->
+                    <div action="" class="animate-on-scroll fade-in-up form-part">
+                        <div class="form-row">
+                            <div class="header donate-header">
+                                <h2>Personal Information</h2>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Full Name *</label>
+                                <input type="text" placeholder="Please Enter Full Name *">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Phone Number *</label>
+                                <input type="text" placeholder="Please Enter Phone Number *">
                             </div>
                             <div class="form-group">
-                                <label for="">Cvv *</label>
-                                <input type="text" placeholder="Please Enter Cvv">
+                                <label for="">Email *</label>
+                                <input type="text" placeholder="Please Enter Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="header donate-header">
+                                <h2>Address information</h2>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Adress Name</label>
+                                <input type="text" placeholder="Please Enter Adress Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Select Governorate</label>
+                                <select name="" id="">
+                                    <option value="">Select Governorate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">State</label>
+                                <select name="" id="">
+                                    <option value="">State</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">City</label>
+                                <select name="" id="">
+                                    <option value="">City</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="">Street Name</label>
+                                <input type="text" placeholder="Please Enter Street Name">
                             </div>
                         </div>
                         <div class="form-row">
                             <button class="button-secondary">
-                                Pay Now
+                                <i class="fa-regular fa-heart"></i>
+                                Donate Now
                             </button>
                         </div>
-                    </form>
-                    <a href="">Secure Payment . <span>SSL Encrypted</span></a>
+                        <div class="form-row">
+                            <a href="" class="donate-link">Secure Donate . <span>SSL Encrypted</span></a>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>

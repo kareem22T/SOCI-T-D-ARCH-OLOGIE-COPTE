@@ -3998,7 +3998,7 @@ footer .footer-bottom .copyright {
     padding: 1.25rem;
   }
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4006,38 +4006,38 @@ footer .footer-bottom .copyright {
   margin-bottom: 2rem;
 }
 @media (max-width: 1280px) {
-  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row {
+  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row {
     margin-bottom: 1.5rem;
     gap: 1rem;
   }
 }
 @media (max-width: 640px) {
-  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row {
+  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row {
     flex-direction: column;
   }
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo {
   position: relative;
   width: max-content !important;
   display: block;
   margin: auto;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo img {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo img, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
 @media (max-width: 640px) {
-  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo img {
+  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo img, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo img {
     width: 120px;
     height: 120px;
   }
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo input {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo input, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo input {
   display: none;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo i {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo i, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo i {
   color: #DEB12C;
   position: absolute;
   bottom: 10px;
@@ -4045,27 +4045,27 @@ footer .footer-bottom .copyright {
   font-size: 1.5rem;
 }
 @media (max-width: 640px) {
-  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo i {
+  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .photo i, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .photo i {
     bottom: 10px;
     right: 10px;
   }
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row a {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row a, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row a {
   font-weight: 600;
   font-size: 14px;
   line-height: 140%;
   color: #DEB12C;
   text-decoration: none;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group {
   flex: 1;
 }
 @media (max-width: 640px) {
-  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group {
+  .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group {
     width: 100%;
   }
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group label {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group label, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group label {
   font-weight: 500;
   font-size: 1rem;
   line-height: 17px;
@@ -4075,7 +4075,9 @@ footer .footer-bottom .copyright {
 }
 .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group input,
 .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group textarea,
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group select {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group select, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group input,
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group textarea,
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group select {
   padding: 12px;
   background: #FDFBF4;
   border: 1.2px solid #F1F1F1;
@@ -4085,28 +4087,30 @@ footer .footer-bottom .copyright {
 }
 .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group input:focus,
 .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group textarea:focus,
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group select:focus {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group select:focus, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group input:focus,
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group textarea:focus,
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group select:focus {
   box-shadow: none;
   outline: none;
   border: 1px solid #1C2E40;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group textarea {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-group textarea, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-group textarea {
   resize: none;
   height: 100px;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-check {
   display: flex;
   gap: 1rem;
   align-items: center;
   white-space: nowrap;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check input {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check input, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-check input {
   width: auto;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check label {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row .form-check label, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row .form-check label {
   margin: 0;
 }
-.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row button {
+.edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form form .form-row button, .edit-profile-wrapper .container .edit-profile-form-wrapper .edit-profile-form .form-part .form-row button {
   width: 100%;
   flex: 1;
 }
@@ -6921,6 +6925,111 @@ footer .footer-bottom .copyright {
 .cart .container .Purchase-btn {
   width: 100%;
   margin-top: 2rem;
+}
+
+.donate-link {
+  color: #1B1B1B !important;
+}
+.donate-link span {
+  color: #DEB12C !important;
+}
+
+.donate-header {
+  width: 100% !important;
+}
+.donate-header h2 {
+  text-align: left !important;
+}
+
+.radion-curr label {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #1B1B1B;
+  transition: all 0.3s ease-in;
+  text-align: center !important;
+  font-weight: 600;
+}
+.radion-curr input {
+  display: none;
+}
+.radion-curr input:checked + label {
+  background-color: #DEB12C;
+}
+
+.edit-profile-form-wrapper-column {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.message {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 1.5rem;
+  background: #FCFAF3;
+  border: 1px solid #F1F1F1;
+  border-radius: 6px;
+  margin: 5rem auto;
+}
+@media (max-width: 768px) {
+  .message {
+    padding: 1rem;
+  }
+}
+.message img {
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 768px) {
+  .message img {
+    width: 110px;
+    height: 110px;
+  }
+}
+.message .svg {
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 768px) {
+  .message .svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+.message h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 37px;
+  text-align: center;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  .message h2 {
+    font-size: 18px;
+  }
+}
+.message button {
+  margin-top: 1rem;
+}
+.message p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #4B4B4B;
+}
+@media (max-width: 768px) {
+  .message p {
+    font-size: 13px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
